@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: inherit;
+}
+
+html, body {
+      height: 100%;
+}
+
+img {
+      display: block;
+      max-width: 100%;
+}
+
+a {
+      text-decoration: none;
+}
+
+:root {
+      --clr-violet: hsl(257, 40%, 49%);
+      --clr-magenta: hsl(300, 69%, 71%);
+
+      --fs-100: .8rem;
+      --fs-200: 1rem;
+      --fs-400-mobile: 1rem;
+      --fs-400-desktop: 1rem;
+      --fs-500: ;
+      --fs-600: 1.5rem;
+      --fs-700: 2.5rem;
+
+      --fw-thin: 200;
+      --fw-light: 300;
+      --fw-regular: 400;
+      --fw-light-bold: 500;
+      --fw-bold: 600;
+      --fw-extra-bold: 700;
+
+      --ff-primary: 'Open Sans', sans-serif;
+      --ff-secondary: 'Poppins', sans-serif;      
+}
+
+body {
+      display: grid;
+      font-family: var(--ff-primary);
+      font-size: var(--fs-400-mobile);
+      font-weight: var(--fw-regular);
+      color: white;
+
+      background: var(--clr-violet) url(images/bg-mobile.svg) no-repeat;
+      background-size: contain;
+}
+
+.grid-flow {
+      display: grid;
+}
+
+.landing-page {
+      place-content: start;
+      padding: 2rem 10%;
+      gap: 3.75rem;
+}
+
+.logo {
+      width: 42.5%;
+}
+
+.main {
+      gap: 3.75rem;
+}
+
+.content {
+      text-align: center;
+      gap: 1.5rem;
+}
+
+.title {
+      font-family: var(--ff-secondary);
+      font-size: var(--fs-600);
+      font-weight: var(--fw-bold)
+}
+
+.description {
+      line-height: 1.6;
+}
+
+.btn {
+      width: 67%;
+      margin: 0 auto;
+      padding: .75rem 0;
+      font-size: var(--fs-100);
+      font-weight: var(--fw-light-bold);
+      color: var(--clr-violet);
+      background-color: white;
+      border-radius: 80px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+.social-links {
+      display: flex;
+      gap: .6rem;
+      justify-content: center;
+      align-items: center;
+}
+
+.icon {
+      display: grid;
+      place-content: center;
+      width: 1.85rem;
+      height: 1.85rem;
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+      font-size: var(--fs-100);
+}
+
+.icon.instagram {
+      font-size: 1rem;
+}
+
+
+@media (min-width: 771px) {
+      body {
+            place-content: center;
+      }
+
+      .landing-page {
+            padding: 0 5%;
+            max-width: 84rem;
+      }
+
+      .logo {
+            width: 20%;
+      }
+
+      .main {
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5%;
+      }
+
+      .content {
+            place-content: center;
+            text-align: start;
+      }
+
+      .title {
+            font-size: var(--fs-700);
+      }
+
+      .description {
+            font-size: var(--fs-400-desktop);
+      }
+
+      .btn {
+            font-size: var(--fs-200);
+            text-align: center;
+            width: 35%;
+            padding: 1rem 0;
+            margin: 0;
+            cursor: pointer;
+            transition: all .1s;
+      }
+
+      .btn:hover {
+            background-color: var(--clr-magenta);
+            color: white;
+      }
+
+      .btn:active {
+            background-color: hsl(300, 62%, 75%);
+      }
+
+      .social-links {
+            justify-content: end;
+            gap: 1rem;
+      }
+
+      .icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: var(--fs-200);
+            transition: all .1s;
+      }
+
+      .icon.instagram {
+            font-size: 1.3rem;
+      }
+
+      .icon:hover {
+            border-color: hsl(300, 69%, 54%);
+            color: hsl(300, 69%, 54%);
+      }
+
+      .icon:active {
+            border-color: hsl(300, 59%, 76%);
+            color: hsl(300, 59%, 76%);
+      }
+}
