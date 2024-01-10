@@ -60,7 +60,7 @@ body {
 
 .landing-page {
       place-content: start;
-      padding: 2rem 10%;
+      margin: 2rem 10%;
       gap: 3.75rem;
 }
 
